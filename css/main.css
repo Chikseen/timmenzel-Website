@@ -1,3 +1,90 @@
-body{
-    background-color: rgb(26, 80, 80);
+mainBodyAnimation{
+  -webkit-transition:all 2s ease-in-out;
+       -moz-transition:all 2s ease-in-out;
+             -o-transition:all 2s ease-in-out;
+                   transition:all 2s ease-in;
+}
+
+body {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  color: #504242;
+  text-shadow: 0.5px 0.5px 2.5px rgba(60, 60, 65, 0.5);
+}
+
+.headerback {
+  background: wheat;
+  min-width: 400;
+  border-radius: 10px;
+  background: radial-gradient(ellipse at left, rgb(245, 222, 179) 0%, rgb(236, 208, 156) 0%, rgb(233, 197, 131)100%);
+  box-shadow: 0.5px 0.5px 10px 1px rgba(58, 56, 44, 0.5);
+}
+
+.header{  
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30%;
+  margin-right: 30%;
+  width: 500;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.title {
+  background-color:tomato;
+  font-size: 2rem;
+  display: flex;
+  justify-content:center;
+}
+
+.title h1 {
+  padding: 15%;
+  white-space: nowrap;
+}
+
+.about {
+  background-color:yellowgreen;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content:left 50%;
+}
+
+.about h2 {
+  padding: 5%;
+  position: relative;
+  top: 0%;
+  left: 39%;
+}
+
+@media screen and (max-width: 600px) {
+
+  .header{
+    animation: slideUp500 1s forwards;
+    display: inline;
+  }
+  .title h1 {
+    padding: 90px;
+    position: relative;
+  }
+  .about h2 {
+    padding: 30px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .header{
+    animation: slideUp500 1s forwards;
+    display: flex;
+    justify-content:center;
+  }
+  .header p {
+    margin-left: 115px;
+    margin-right: 115px;
+  }
+  .title h1 {
+    padding: 225px;
+    position: relative;
+  }
+  .about h2 {
+    padding: 75px;
+  }
 }
