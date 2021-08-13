@@ -16,7 +16,7 @@ function throttle(fn, wait) {
 
 function parallax() {
   var scrolled = window.pageYOffset;
-  var parallax = document.querySelector(".mainbackground");
-	var coords = (scrolled * 0.7) + 'px'
+  var parallax = document.querySelector(".rectclass3");
+	var coords = (scrolled * -0.2) + 'px'
   parallax.style.transform = 'translateY(' + coords + ')';
 };
