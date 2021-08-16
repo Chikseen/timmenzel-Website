@@ -1,10 +1,20 @@
+body {
+  --bg-color: rgba(235, 243, 243, 0.5);
+}
+body.dark-theme {
+  --bg-color: rgba(63, 70, 70, 0.5);
+}
 
 body {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  color: rgb(95, 97, 92);
+
   text-shadow: 0.5px 0.5px 10px rgba(110, 110, 119, 0.74);
   background: linear-gradient(to bottom, #ece6db 10%, #C9B49F 50%, #A57761 100%);
   font-size: 1rem;
+}
+body.dark-theme {
+  background-color: #121212;
+  color: #e6d8d8;
 }
 
 .mainbackground{
@@ -46,6 +56,11 @@ body {
   z-index: -4;
 }
 
+.colormode{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .header{
   background-color: rgba(235, 243, 243, 0.4);
@@ -171,7 +186,7 @@ body {
   box-shadow: 0.5px 0.5px 10px 1px rgba(58, 56, 44, 0.5);
   border-radius: 20px;
   transition: all 0.5s;
-  background-color: rgba(235, 243, 243, 0.6);
+  background-color: var(--bg-color);
 }
 
 .infotext img {
@@ -232,10 +247,25 @@ body {
   background-color: rgba(165, 42, 42, 0);
 }
 
+.colormode{
+  width: 300px;
+}
+
 @media screen and (orientation: portrait) {
   body {
     font-size: 1.5rem;
     background: linear-gradient(to bottom, #14b90e 10%, #cf1070 50%, #A57761 100%);
+  } 
+  .colormode{
+    position: absolute;
+    top: 10px;
+    right: 110px;
+    display: inline;
+  }
+  .colormode img {
+    position: absolute;
+    right: 0px;
+    width: 100px;
   } 
   .edu-exp-grid, .project-grid {
     grid-template-columns: 100%;
@@ -276,12 +306,12 @@ body {
   }
   .menu {
     display:none;
-    
     z-index: 1;
     transition: all 0.5s;
   }
   .menu p {
     padding-bottom: 30px;
+    font-size: 2.5rem;
   }
 
   .port-header:hover .menu {
@@ -299,7 +329,17 @@ body {
     height: 100px;
   }
   .port-header:hover .box-menu{
-    height: 440px;
-    width: 200px;
+    height: 650px;
+    width: 220px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  /* defaults to dark theme */
+  body {
+    --bg-color: rgba(63, 70, 70, 0.5);
+  }
+  body.light-theme {
+    --bg-color: rgba(235, 243, 243, 0.5);
   }
 }
