@@ -34,12 +34,15 @@ body {
   width: 100%;
   height: 750px;
   z-index: -5;
+  transition: all 0.3s;
 }
+
 
 .rectclass1, .rectclass2, .rectclass3, .rectclass4{
   position: absolute;
   display:inline;
   background-size: cover;
+  transition: all 0.3s;
 }
 .rectclass1 {
   top: 1200px;
