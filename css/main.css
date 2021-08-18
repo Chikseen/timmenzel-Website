@@ -34,7 +34,7 @@ body {
   width: 100%;
   height: 750px;
   z-index: -5;
-  transition: all 0.3s;
+  transition: all 0.7s;
 }
 
 
@@ -42,7 +42,7 @@ body {
   position: absolute;
   display:inline;
   background-size: cover;
-  transition: all 0.3s;
+  transition: all 0.7s;
 }
 .rectclass1 {
   top: 1200px;
@@ -204,7 +204,7 @@ body {
   z-index: 0;
   position:sticky;
   margin: 2%;
-  width: 30%;
+  width: 50%;
   border-radius: 10px;
   box-shadow: 0.5px 0.5px 5px 0.5px rgba(58, 56, 44, 0.5);
   transition: all 0.5;
@@ -248,15 +248,34 @@ body {
 }
 
 .infotextimg:hover, .infotext img:hover {
-  filter:blur(1px) grayscale(50%);
+  filter: grayscale(50%);
+  box-shadow: inset 1 1 10 10px rgb(240, 0, 0);
   text-shadow: var(--shadow-hover-color);
-  width: 32%;
-  margin: 1.35%;
   visibility:visible;
 }
 
-.colormode{
-  width: 300px;
+.color-mode{
+  height: 50px;
+  width: 100px;
+  border: rgba(0, 0, 0, 0);
+  border-radius: 100px;
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow-color);
+}
+.switch {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 40%;
+  height: 80%;
+  background-color: green;
+  border-radius: 90%;
+}
+
+.color-mode.switch{
+  left: 50%;
+  background-color: green;
+  border-radius: 90%;
 }
 
 @media screen and (orientation: portrait) {
@@ -290,8 +309,8 @@ body {
     transition: all 0.5s;
   }
   .box-menu {
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     backdrop-filter: blur(10px);
     box-shadow: 0.5px 0.5px 5px 0.5px rgba(58, 56, 44, 0.5);
     border-radius: 10px;
@@ -301,12 +320,12 @@ body {
   }
   .box-menu-content {
     position: relative;
-    top: 15%;
-    left: 10%;
+    top: 10%;
+    left: 7%;
     margin: 11px;
     height: 5%;
     width: 70%;
-    background-color: brown;
+    background-color: var(--font-color);
     border-radius: 2px;
     font-size: 0.5px;
     transition: all 0.5s;
@@ -318,7 +337,8 @@ body {
   }
   .menu p {
     padding-bottom: 30px;
-    font-size: 2.5rem;
+    font-size: 1rem;
+    transition: all 0.5s;
   }
 
   .port-header:hover .menu {
@@ -336,8 +356,11 @@ body {
     height: 100px;
   }
   .port-header:hover .box-menu{
-    height: 650px;
-    width: 260px;
+    height: 580px;
+    width: 230px;
+  }
+  .port-header:hover .menu p{
+    font-size: 2rem;
   }
 }
 
