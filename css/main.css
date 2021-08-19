@@ -95,7 +95,7 @@ body {
 .layer5 {
   z-index: -1;
   left: -100px;
-  width: calc(100% + 200px);
+  width: calc(100% + 100px);
   top: 500px;
   height: 2000px;
   background-image: var(--bg-layer4);
@@ -290,12 +290,6 @@ body {
   left: 10%;
   width: 40%;
   height: 80%;
-  background-color: green;
-  border-radius: 90%;
-}
-
-.color-mode.switch{
-  left: 50%;
   background-color: green;
   border-radius: 90%;
 }
