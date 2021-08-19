@@ -12,13 +12,13 @@ function throttle(fn, wait) {
 
 function parallax() {
   var scrolled = window.pageYOffset;
-  var mbg = document.querySelector(".mainbackground");
-  var st1 = document.querySelector(".rectclass1");
-  var st2 = document.querySelector(".rectclass2");
-  var st3 = document.querySelector(".rectclass3");
-  var st4 = document.querySelector(".rectclass4");
+  var mbg = document.querySelector(".layer1");
+  var st1 = document.querySelector(".layer2");
+  var st2 = document.querySelector(".layer3");
+  var st3 = document.querySelector(".layer4");
+  var st4 = document.querySelector(".layer5");
 
-	var layerbg = (scrolled * 0.2) + 'px'
+	var layerbg = (scrolled * 0.3) + 'px'
   var layer1 = (scrolled * 0.5) + 'px'
   var layer2 = (scrolled * 0.6) + 'px'
   var layer3 = (scrolled * -0.3) + 'px'
