@@ -389,6 +389,10 @@ body {
   --font-hover-color: rgba(214, 224, 197, 0.9);
   --shadow-color: 0.5px 0.5px 25px 1px rgba(212, 209, 190, 0.5);
   --shadow-hover-color: 0.5px 0.5px 50px 1px rgba(93, 91, 78, 0.739);
+  --bg-layer1: url("/image/background/Light/Light_L1.png");
+  --bg-layer2: url("/image/background/Light/Light_L2.png");
+  --bg-layer3: url("/image/background/Light/Light_L3.png");
+  --bg-layer4: url("/image/background/Light/Light_L4.png");
   }
   body.light-theme {
   --bg-color: rgba(63, 70, 70, 0.6);
@@ -397,5 +401,9 @@ body {
   --font-hover-color: rgba(68, 73, 62, 0.9);
   --shadow-color: 0.5px 0.5px 25px 1px rgba(59, 58, 52, 0.5);
   --shadow-hover-color: 0.5px 0.5px 50px 1px rgba(185, 181, 157, 0.815);
+  --bg-layer1: url("/image/background/Dark/Dark_L1.png");
+  --bg-layer2: url("/image/background/Dark/Dark_L2.png");
+  --bg-layer3: url("/image/background/Dark/Dark_L3.png");
+  --bg-layer4: url("/image/background/Dark/Dark_L4.png");
   }
 }
