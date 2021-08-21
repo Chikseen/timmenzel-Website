@@ -1,0 +1,315 @@
+/*RED BASE_________________________________________*/
+#rb0 {
+    grid-area: rb0;
+    background-color: crimson;
+}
+#rb1 {
+    grid-area: rb1;
+    background-color: crimson;
+}
+#rb2 {
+    grid-area: rb2;
+    background-color: crimson;
+}
+#rb3 {
+    grid-area: rb3;
+    background-color: crimson;
+}
+
+/*BLUE BASE_________________________________________*/
+
+#bb0 {
+    grid-area: bb0;
+    background-color:darkcyan;
+}
+#bb1 {
+    grid-area: bb1;
+    background-color:darkcyan;
+}
+#bb2 {
+    grid-area: bb2;
+    background-color:darkcyan;
+}
+#bb3 {
+    grid-area: bb3;
+    background-color:darkcyan;
+}
+
+/*YELLOW BASE_________________________________________*/
+
+#yb0 {
+    grid-area: yb0;
+    background-color:darkorange;
+}
+#yb1 {
+    grid-area: yb1;
+    background-color:darkorange;
+}
+#yb2 {
+    grid-area: yb2;
+    background-color:darkorange;
+}
+#yb3 {
+    grid-area: yb3;
+    background-color:darkorange;
+}
+
+/*GREEN BASE_________________________________________*/
+
+#gb0 {
+    grid-area: gb0;
+    background-color:darkseagreen;
+}
+#gb1 {
+    grid-area: gb1;
+    background-color:darkseagreen;
+}
+#gb2 {
+    grid-area: gb2;
+    background-color:darkseagreen;
+}
+#gb3 {
+    grid-area: gb3;
+    background-color:darkseagreen;
+}
+
+/*RED HOUSE_________________________________________*/
+#rh0 {
+    grid-area: rh0;
+    background-color: crimson;
+}
+#rh1 {
+    grid-area: rh1;
+    background-color: crimson;
+}
+#rh2 {
+    grid-area: rh2;
+    background-color: crimson;
+}
+#rh3 {
+    grid-area: rh3;
+    background-color: crimson;
+}
+
+/*BLUE HOUSE_________________________________________*/
+
+#bh0 {
+    grid-area: bh0;
+    background-color:darkcyan;
+}
+#bh1 {
+    grid-area: bh1;
+    background-color:darkcyan;
+}
+#bh2 {
+    grid-area: bh2;
+    background-color:darkcyan;
+}
+#bh3 {
+    grid-area: bh3;
+    background-color:darkcyan;
+}
+
+/*YELLOW HOUSE_________________________________________*/
+
+#yh0 {
+    grid-area: yh0;
+    background-color:darkorange;
+}
+#yh1 {
+    grid-area: yh1;
+    background-color:darkorange;
+}
+#yh2 {
+    grid-area: yh2;
+    background-color:darkorange;
+}
+#yh3 {
+    grid-area: yh3;
+    background-color:darkorange;
+}
+
+/*GREEN HOUSE_________________________________________*/
+
+#gh0 {
+    grid-area: gh0;
+    background-color:darkseagreen;
+}
+#gh1 {
+    grid-area: gh1;
+    background-color:darkseagreen;
+}
+#gh2 {
+    grid-area: gh2;
+    background-color:darkseagreen;
+}
+#gh3 {
+    grid-area: gh3;
+    background-color:darkseagreen;
+}
+
+/*FIELD 1-10_________________________________________*/
+
+#fi0 {
+    grid-area: fi0;
+    background-color:dimgrey;
+}
+#fi1 {
+    grid-area: fi1;
+    background-color:dimgrey;
+}
+#fi2 {
+    grid-area: fi2;
+    background-color:dimgrey;
+}
+#fi3 {
+    grid-area: fi3;
+    background-color:dimgrey;
+}
+#fi4 {
+    grid-area: fi4;
+    background-color:dimgrey;
+}
+#fi5 {
+    grid-area: fi5;
+    background-color:dimgrey;
+}
+#fi6 {
+    grid-area: fi6;
+    background-color:dimgrey;
+}
+#fi7 {
+    grid-area: fi7;
+    background-color:dimgrey;
+}
+#fi8 {
+    grid-area: fi8;
+    background-color:dimgrey;
+}
+#fi9 {
+    grid-area: fi9;
+    background-color:dimgrey;
+}
+#fi10 {
+    grid-area: fi10;
+    background-color:dimgrey;
+}
+/*FIELD 11-20_________________________________________*/
+#fi11 {
+    grid-area: fi11;
+    background-color:dimgrey;
+}
+#fi12 {
+    grid-area: fi12;
+    background-color:dimgrey;
+}
+#fi13 {
+    grid-area: fi13;
+    background-color:dimgrey;
+}
+#fi14 {
+    grid-area: fi14;
+    background-color:dimgrey;
+}
+#fi15 {
+    grid-area: fi15;
+    background-color:dimgrey;
+}
+#fi16 {
+    grid-area: fi16;
+    background-color:dimgrey;
+}
+#fi17 {
+    grid-area: fi17;
+    background-color:dimgrey;
+}
+#fi18 {
+    grid-area: fi18;
+    background-color:dimgrey;
+}
+#fi19 {
+    grid-area: fi19;
+    background-color:dimgrey;
+}
+#fi20 {
+    grid-area: fi20;
+    background-color:dimgrey;
+}
+/*FIELD 21-30_________________________________________*/
+#fi21 {
+    grid-area: fi21;
+    background-color:dimgrey;
+}
+#fi22 {
+    grid-area: fi22;
+    background-color:dimgrey;
+}
+#fi23 {
+    grid-area: fi23;
+    background-color:dimgrey;
+}
+#fi24 {
+    grid-area: fi24;
+    background-color:dimgrey;
+}
+#fi25 {
+    grid-area: fi25;
+    background-color:dimgrey;
+}
+#fi26 {
+    grid-area: fi26;
+    background-color:dimgrey;
+}
+#fi27 {
+    grid-area: fi27;
+    background-color:dimgrey;
+}
+#fi28 {
+    grid-area: fi28;
+    background-color:dimgrey;
+}
+#fi29 {
+    grid-area: fi29;
+    background-color:dimgrey;
+}
+#fi30 {
+    grid-area: fi30;
+    background-color:dimgrey;
+}
+/*FIELD 31-39_________________________________________*/
+#fi31 {
+    grid-area: fi31;
+    background-color:dimgrey;
+}
+#fi32 {
+    grid-area: fi32;
+    background-color:dimgrey;
+}
+#fi33 {
+    grid-area: fi33;
+    background-color:dimgrey;
+}
+#fi34 {
+    grid-area: fi34;
+    background-color:dimgrey;
+}
+#fi35 {
+    grid-area: fi35;
+    background-color:dimgrey;
+}
+#fi36 {
+    grid-area: fi36;
+    background-color:dimgrey;
+}
+#fi37 {
+    grid-area: fi37;
+    background-color:dimgrey;
+}
+#fi38 {
+    grid-area: fi38;
+    background-color:dimgrey;
+}
+#fi39 {
+    grid-area: fi39;
+    background-color:dimgrey;
+}
