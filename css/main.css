@@ -27,8 +27,9 @@ body {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   color: var(--font-color);
   text-shadow: 0.5px 0.5px 10px rgba(110, 110, 119, 0.74);
-  background: linear-gradient(to bottom, #ece6db 10%, #C9B49F 50%, #A57761 100%);
+  background: linear-gradient(to bottom, rgb(236, 227, 227) 10%,rgb(166,102,102) 15%, rgb(109, 70, 70) 50%,rgb(73, 56, 36) 100%);
   font-size: 1rem;
+  text-decoration: none;
 }
 
 .mainbackground{
@@ -80,7 +81,7 @@ body {
   box-shadow: 0.5px 0.5px 10px 1px rgba(58, 56, 44, 0.5);
   border-radius: 10px;
   padding: 3rem;
-  transition: all 0.5s linear;
+  transition: all 0.5s ease-out;
 }
 
 
@@ -89,7 +90,7 @@ body {
   top: -100px;
   height: 2000px;
   background-image: var(--bg-layer3);
-  transition: all 0.4s linear;
+  transition: all 0.4s ease-out;
 }
 
 .layer5 {
@@ -99,7 +100,7 @@ body {
   top: 500px;
   height: 2000px;
   background-image: var(--bg-layer4);
-  transition: all 0.4s linear;
+  transition: all 0.4s ease-out;
 }
 
 .color-mode{
@@ -108,22 +109,31 @@ body {
   right: 10px;
 }
 
+#about, #projects, #skills, #edu-exp {
+  padding-top: 15px;
+  margin-bottom: 20px;
+}
+
 .header{
   background-color: var(--bg-color);
   position: fixed;
   display: flex;
-  top: -10px;
-  height: 100px;
+  top: -5px;
+  height: 30px;
   width: 450px;
-  align-items: center;
-  justify-content: center;
   left: 50%;
   margin-left: -225px;
+  align-items: center;
+  justify-content: center;
   backdrop-filter: blur(20px);
   box-shadow: 0.5px 0.5px 10px 1px rgba(58, 56, 44, 0.5);
-  border-radius: 10px;
-  transition: opacity 0.5s linear;
+  border-radius: 5px;
+  transition: 0.2s linear;
   z-index: 10;
+}
+.header a{
+  color: var(--font-color);
+  text-decoration: none;
 }
 
 .port-header {
@@ -156,7 +166,7 @@ body {
 }
 
 .infoscreen {
-    text-align: center;
+  text-align: center;
 }
 
 .infoscreen h2{
@@ -242,11 +252,6 @@ body {
   visibility:hidden;
   transition: all 0.5;
 }
-
-#aboutme {
-  margin-bottom: 20px;
-}
-
 .spacer{
   height:2px;
   background-color: var(--bg-color);
@@ -262,11 +267,19 @@ body {
   text-shadow: var(--shadow-hover-color);
 }
 
-.infotext:hover, .infoscreen h2:hover, .title h1:hover, header:hover {
+.infotext:hover, .infoscreen h2:hover, .title h1:hover, .header:hover {
   color: var(--font-hover-color);
   text-shadow: var(--shadow-hover-color);
   background-color: var(--bg-hover-color);
   box-shadow: var(--shadow-hover-color);
+  border-radius: 15px;
+}
+.header:hover {
+  top: -10px;
+  height: 100px;
+  width: 450px;
+  left: 50%;
+  margin-left: -225px;
 }
 
 .infotextimg:hover, .infotext img:hover {
@@ -335,6 +348,7 @@ body {
     transition: all 0.5s;
   }
   .box-menu-content {
+    text-decoration: none;
     position: relative;
     top: 10%;
     left: 7%;
@@ -376,6 +390,8 @@ body {
     width: 230px;
   }
   .port-header:hover .menu p{
+    color: var(--font-color);
+    text-decoration: none;
     font-size: 2rem;
   }
 }

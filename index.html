@@ -11,11 +11,11 @@
 <body>
     <div class="nav-view">
         <div class="header">
-            <a href="#logo-short-info"><p>Home</p></a>
-            <p>About</p>
-            <p>Projects</p>
-            <p>Skills</p>
-            <p>Experience</p>
+            <a href="#home"><p>Home</p></a>
+            <a href="#about"><p>About</p></a>
+            <a href="#projects"><p>Projects</p></a>
+            <a href="#skills"><p>Skills</p></a>
+            <a href="#edu-exp"><p>Experience</p></a>
         </div>
         <div class="port-header">
             <div class="box-menu">
@@ -34,24 +34,24 @@
             </div>
             <ul class="menu">
                 <li>
-                    <p>Home</p>
+                    <a href="#home"><p>Home</p></a>
                 </li>
                 <li>
-                    <p>About</p>
+                    <a href="#about"><p>About</p></a>
                 </li>
                 <li>
-                    <p>Projects</p>
+                    <a href="#projects"><p>Projects</p></a>
                 </li>
                 <li>
-                    <p>Skills</p>
+                    <a href="#skills"><p>Skills</p></a>
                 </li>
                 <li>
-                    <p>Experience</p>
+                    <a href="#edu-exp"><p>Experience</p></a>
                 </li>
             </ul>
         </div>
     </div>
-    <div class="mainbackground">
+    <div class="mainbackground" id="home">
         <div class="layer1">
             <p> &nbsp </p>
         </div>
@@ -77,7 +77,7 @@
                 </button>
             </div>
             <div class="infoscreen">
-                <div class="about" id="logo-short-info">
+                <div class="about" id="about">
                     <h2>About me</h2>
                     <div class="infotext" id="aboutme">
                         <img src="/image/info/profilpic.png" alt="">
@@ -99,7 +99,7 @@
                         <p>(These Pics are just a placeholder)</p>
                     </div>
                 </div>
-                <div class="projects" id="all-projects">
+                <div class="projects" id="projects">
                     <h2>Current Projects</h2>
                     <div class="project-grid" id="project-grid">
                         <div class="infotext" id="project-baka">
@@ -120,7 +120,7 @@
                         </div>
                         <div class="infotext" id="project-hdgm-web">
                             <h3>HDGM WEB CLIENT</h3>
-                            <a href = "/hdgm.html">Webclient!Pictureplaceholder</a>
+                            <a href = "/hdgm/hdgm.html">Webclient!Pictureplaceholder</a>
                             <h4>Human-Dont-Get-Mad</h4>
                             <p>This is a WebClient to play a ludo game online</p>
                             <p>It uses the same server as our original ludo game but has a completely
@@ -146,7 +146,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="skills">
+                <div class="skills" id="skills">
                     <h2>Skills</h2>
                     <div class="infotext">
                         <p>I have Basic+ Experince in C++</p>

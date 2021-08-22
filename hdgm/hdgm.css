@@ -1,5 +1,7 @@
 html, body { 
     height: 99%;
+
+    --no-figuer-color: rgba(233, 229, 229, 0.767);
 }
 
 .maingrid {
@@ -37,6 +39,10 @@ html, body {
     height: 100%;
     grid-area: c;
     background-color: rgba(64, 25, 155, 0.7);
+}
+.gamewindow button {
+    border-radius: 25%;
+    background-color: var(--no-figuer-color);
 }
 
 @media screen and (orientation: landscape) {
