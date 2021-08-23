@@ -31,10 +31,10 @@ function parallax() {
     var st4 = document.querySelector(".layer5");
 
     var layerbg = (scrolled * 0.3) + 'px'
-    var layer1 = (scrolled * 0.5) + 'px'
-    var layer2 = (scrolled * 0.6) + 'px'
+    var layer1 = (scrolled * 0.8) + 'px'
+    var layer2 = (scrolled * 0.5) + 'px'
     var layer3 = (scrolled * -0.3) + 'px'
-    var layer4 = (scrolled * -0.8) + 'px'
+    var layer4 = (scrolled * -1.3) + 'px'
 
     mbg.classList.add("myclass");
     mbg.style.transform = 'translateY(' + layerbg + ')';

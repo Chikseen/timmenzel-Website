@@ -5,7 +5,7 @@ body {
   --font-hover-color: rgba(214, 224, 197, 0.9);
   --shadow-color: 0.5px 0.5px 25px 1px rgba(212, 209, 190, 0.5);
   --shadow-hover-color: 0.5px 0.5px 50px 1px rgba(93, 91, 78, 0.739);
-  --bg-layer1: url("/image/background/Light/Light_L1.png");
+  --bg-layer1: url("/image/background/Light/Light_L1.svg");
   --bg-layer2: url("/image/background/Light/Light_L2.png");
   --bg-layer3: url("/image/background/Light/Light_L3.png");
   --bg-layer4: url("/image/background/Light/Light_L4.png");
@@ -49,7 +49,7 @@ body {
 
 .layer1{
   z-index: -5;
-  top: -500px;
+  top: -175px;
   height: 2000px;
   background-image: var(--bg-layer1);
   transition: all 0.4s linear;
@@ -57,7 +57,7 @@ body {
 
 .layer2 {
   z-index: -4;
-  top: -300px;
+  top: 0px;
   height: 2000px;
   background-image: var(--bg-layer2);
   transition: all 0.4s linear;
@@ -87,7 +87,7 @@ body {
 
 .layer4 {
   z-index: -2;
-  top: -100px;
+  top: 100px;
   height: 2000px;
   background-image: var(--bg-layer3);
   transition: all 0.4s ease-out;
@@ -97,7 +97,7 @@ body {
   z-index: -1;
   left: -100px;
   width: calc(100% + 100px);
-  top: 500px;
+  top: 700px;
   height: 2000px;
   background-image: var(--bg-layer4);
   transition: all 0.4s ease-out;
@@ -399,10 +399,10 @@ body {
   --font-hover-color: rgba(214, 224, 197, 0.9);
   --shadow-color: 0.5px 0.5px 25px 1px rgba(212, 209, 190, 0.5);
   --shadow-hover-color: 0.5px 0.5px 50px 1px rgba(93, 91, 78, 0.739);
-  --bg-layer1: url("/image/background/Light/Light_L1.png");
-  --bg-layer2: url("/image/background/Light/Light_L2.png");
-  --bg-layer3: url("/image/background/Light/Light_L3.png");
-  --bg-layer4: url("/image/background/Light/Light_L4.png");
+  --bg-layer1: url("/image/background/Light/Light_L1.svg");
+  --bg-layer2: url("/image/background/Light/Light_L2.svg");
+  --bg-layer3: url("/image/background/Light/Light_L3.svg"); 
+  --bg-layer4: url("/image/background/Light/Light_L4.svg");
   }
   body.light-theme {
   --bg-color: rgba(63, 70, 70, 0.6);
@@ -411,9 +411,9 @@ body {
   --font-hover-color: rgba(68, 73, 62, 0.9);
   --shadow-color: 0.5px 0.5px 25px 1px rgba(59, 58, 52, 0.5);
   --shadow-hover-color: 0.5px 0.5px 50px 1px rgba(185, 181, 157, 0.815);
-  --bg-layer1: url("/image/background/Dark/Dark_L1.png");
-  --bg-layer2: url("/image/background/Dark/Dark_L2.png");
-  --bg-layer3: url("/image/background/Dark/Dark_L3.png");
-  --bg-layer4: url("/image/background/Dark/Dark_L4.png");
+  --bg-layer1: url("/image/background/Dark/Dark_L1.svg");
+  --bg-layer2: url("/image/background/Dark/Dark_L2.svg");
+  --bg-layer3: url("/image/background/Dark/Dark_L3.svg");
+  --bg-layer4: url("/image/background/Dark/Dark_L4.svg");
   }
 }
