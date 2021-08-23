@@ -13,14 +13,15 @@ document.querySelector(".color-mode").addEventListener("click", function () {
 var isLight
 
 function switchbutton(){
+  document.querySelector(".color-switch-circle").classList.add("myswitch");
   if (isLight) {
-    document.querySelector(".switch").classList.add("myclass1");
-    document.querySelector(".switch").style.transform = 'translateX(0%)';
+    document.querySelector(".color-switch-circle").classList.add("myswitch");
+    document.querySelector(".color-switch-circle").style.transform = 'translateX(0px)';
     isLight = false;
   }
   else {
-    document.querySelector(".switch").classList.add("myclass1");
-    document.querySelector(".switch").style.transform = 'translateX(100%)';
+    document.querySelector(".color-switch-circle").classList.add("myswitch");
+    document.querySelector(".color-switch-circle").style.transform = 'translateX(45px)';
     isLight = true;
   }
 }

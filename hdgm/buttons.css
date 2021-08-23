@@ -1,151 +1,118 @@
 /*RED BASE_________________________________________*/
 #rb0 {
     grid-area: rb0;
-    background-color: crimson;
 }
 #rb1 {
     grid-area: rb1;
-    background-color: crimson;
 }
 #rb2 {
     grid-area: rb2;
-    background-color: crimson;
 }
 #rb3 {
     grid-area: rb3;
-    background-color: crimson;
 }
 
 /*BLUE BASE_________________________________________*/
 
 #bb0 {
     grid-area: bb0;
-    background-color:darkcyan;
 }
 #bb1 {
     grid-area: bb1;
-    background-color:darkcyan;
 }
 #bb2 {
     grid-area: bb2;
-    background-color:darkcyan;
 }
 #bb3 {
     grid-area: bb3;
-    background-color:darkcyan;
 }
 
 /*YELLOW BASE_________________________________________*/
 
 #yb0 {
     grid-area: yb0;
-    background-color:darkorange;
 }
 #yb1 {
     grid-area: yb1;
-    background-color:darkorange;
 }
 #yb2 {
     grid-area: yb2;
-    background-color:darkorange;
 }
 #yb3 {
     grid-area: yb3;
-    background-color:darkorange;
 }
 
 /*GREEN BASE_________________________________________*/
 
 #gb0 {
     grid-area: gb0;
-    background-color:darkseagreen;
 }
 #gb1 {
     grid-area: gb1;
-    background-color:darkseagreen;
 }
 #gb2 {
     grid-area: gb2;
-    background-color:darkseagreen;
 }
 #gb3 {
     grid-area: gb3;
-    background-color:darkseagreen;
 }
 
 /*RED HOUSE_________________________________________*/
 #rh0 {
     grid-area: rh0;
-    background-color: crimson;
 }
 #rh1 {
     grid-area: rh1;
-    background-color: crimson;
 }
 #rh2 {
     grid-area: rh2;
-    background-color: crimson;
 }
 #rh3 {
     grid-area: rh3;
-    background-color: crimson;
 }
 
 /*BLUE HOUSE_________________________________________*/
 
 #bh0 {
     grid-area: bh0;
-    background-color:darkcyan;
 }
 #bh1 {
     grid-area: bh1;
-    background-color:darkcyan;
 }
 #bh2 {
     grid-area: bh2;
-    background-color:darkcyan;
 }
 #bh3 {
     grid-area: bh3;
-    background-color:darkcyan;
 }
-
 /*YELLOW HOUSE_________________________________________*/
 
 #yh0 {
     grid-area: yh0;
-    background-color:darkorange;
 }
 #yh1 {
     grid-area: yh1;
-    background-color:darkorange;
 }
 #yh2 {
     grid-area: yh2;
-    background-color:darkorange;
 }
 #yh3 {
     grid-area: yh3;
-    background-color:darkorange;
 }
 
 /*GREEN HOUSE_________________________________________*/
 
 #gh0 {
     grid-area: gh0;
-    background-color:darkseagreen;
 }
 #gh1 {
     grid-area: gh1;
-    background-color:darkseagreen;
 }
 #gh2 {
     grid-area: gh2;
-    background-color:darkseagreen;
 }
 #gh3 {
     grid-area: gh3;
-    background-color:darkseagreen;
 }
 
 /*FIELD 1-10_________________________________________*/
