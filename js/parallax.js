@@ -13,8 +13,6 @@ function throttle(fn, wait) {
 function parallax() {
   var scrolled = window.pageYOffset;
 
-  console.log(window.pageYOffset);
-
   if (window.pageYOffset >= 750) {
     document.querySelector(".layer1").style.transform = 'translateY(-1000px)';
     document.querySelector(".layer2").style.transform = 'translateY(-1100px)';
