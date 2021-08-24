@@ -5,10 +5,11 @@ body {
   --font-hover-color: rgba(214, 224, 197, 0.9);
   --shadow-color: 0.5px 0.5px 25px 1px rgba(212, 209, 190, 0.5);
   --shadow-hover-color: 0.5px 0.5px 50px 1px rgba(93, 91, 78, 0.739);
-  --bg-layer1: url("/image/background/Light/Light_L1.svg");
-  --bg-layer2: url("/image/background/Light/Light_L2.png");
-  --bg-layer3: url("/image/background/Light/Light_L3.png");
-  --bg-layer4: url("/image/background/Light/Light_L4.png");
+  --main-bg: linear-gradient(to bottom, var(--layer-four-color), 60%, hsl(0, 0%, 75%) 100%);
+  --layer-one-color: var(--light-color-blue-one);
+  --layer-two-color: var(--light-color-blue-two);
+  --layer-three-color: var(--light-color-blue-three);
+  --layer-four-color: var(--light-color-blue-four);
 }
 body.dark-theme {
   --bg-color: rgba(63, 70, 70, 0.6);
@@ -17,17 +18,18 @@ body.dark-theme {
   --font-hover-color: rgba(68, 73, 62, 0.9);
   --shadow-color: 0.5px 0.5px 25px 1px rgba(59, 58, 52, 0.5);
   --shadow-hover-color: 0.5px 0.5px 50px 1px rgba(185, 181, 157, 0.815);
-  --bg-layer1: url("/image/background/Dark/Dark_L1.png");
-  --bg-layer2: url("/image/background/Dark/Dark_L2.png");
-  --bg-layer3: url("/image/background/Dark/Dark_L3.png");
-  --bg-layer4: url("/image/background/Dark/Dark_L4.png");
+  --main-bg: linear-gradient(to bottom, var(--layer-four-color), 60%, hsl(0, 0%, 25%) 100%);
+  --layer-one-color: var(--dark-color-blue-one);
+  --layer-two-color: var(--dark-color-blue-two);
+  --layer-three-color: var(--dark-color-blue-three);
+  --layer-four-color: var(--dark-color-blue-four);
 }
 
 body {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   color: var(--font-color);
   text-shadow: 0.5px 0.5px 10px rgba(110, 110, 119, 0.74);
-  background: linear-gradient(to bottom, rgb(236, 227, 227) 10%,rgb(166,102,102) 15%, rgb(109, 70, 70) 50%,rgb(73, 56, 36) 100%);
+  background: var(--main-bg);
   font-size: 1rem;
   text-decoration: none;
 }
@@ -51,16 +53,20 @@ body {
   z-index: -5;
   top: -175px;
   height: 2000px;
-  background-image: var(--bg-layer1);
-  transition: all 0.4s linear;
+  transition: all 0.2s linear;
+}
+.layer1 svg {
+  fill: var(--layer-one-color);
 }
 
 .layer2 {
   z-index: -4;
   top: 0px;
   height: 2000px;
-  background-image: var(--bg-layer2);
-  transition: all 0.4s linear;
+  transition: all 0.2s linear;
+}
+.layer2 svg {
+  fill: var(--layer-two-color);
 }
 
 .layer3 {
@@ -71,7 +77,7 @@ body {
   height: 200px;
   justify-content:center;
   align-items: center;
-  transition: all 0.4s linear;
+  transition: all 0.2s linear;
 }
 .layer3 h1 {
   font-size: 5rem;
@@ -81,7 +87,7 @@ body {
   box-shadow: 0.5px 0.5px 10px 1px rgba(58, 56, 44, 0.5);
   border-radius: 10px;
   padding: 3rem;
-  transition: all 0.5s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 
@@ -89,8 +95,10 @@ body {
   z-index: -2;
   top: 100px;
   height: 2000px;
-  background-image: var(--bg-layer3);
-  transition: all 0.4s ease-out;
+  transition: all 0.2s ease-out;
+}
+.layer4 svg {
+  fill:  var(--layer-three-color);
 }
 
 .layer5 {
@@ -99,8 +107,10 @@ body {
   width: calc(100% + 100px);
   top: 700px;
   height: 2000px;
-  background-image: var(--bg-layer4);
-  transition: all 0.4s ease-out;
+  transition: all 0.2s ease-out;
+}
+.layer5 svg {
+  fill:  var(--layer-four-color);
 }
 
 .color-mode{
@@ -301,6 +311,10 @@ body {
   fill: green;
   transform: translate(295px, 115px);
 }
+.switch {
+  width: 100px;
+  height: 50px;
+}
 
 @media screen and (orientation: portrait) {
   body {
@@ -399,10 +413,11 @@ body {
   --font-hover-color: rgba(214, 224, 197, 0.9);
   --shadow-color: 0.5px 0.5px 25px 1px rgba(212, 209, 190, 0.5);
   --shadow-hover-color: 0.5px 0.5px 50px 1px rgba(93, 91, 78, 0.739);
-  --bg-layer1: url("/image/background/Light/Light_L1.svg");
-  --bg-layer2: url("/image/background/Light/Light_L2.svg");
-  --bg-layer3: url("/image/background/Light/Light_L3.svg"); 
-  --bg-layer4: url("/image/background/Light/Light_L4.svg");
+  --main-bg: linear-gradient(to bottom, var(--layer-four-color),0%, var(--layer-three-color),10%, var(--layer-four-color),80%,var(--layer-one-color) 100%);
+  --layer-one-color: var(--light-color-blue-one);
+  --layer-two-color: var(--light-color-blue-two);
+  --layer-three-color: var(--light-color-blue-three);
+  --layer-four-color: var(--light-color-blue-four);
   }
   body.light-theme {
   --bg-color: rgba(63, 70, 70, 0.6);
@@ -411,9 +426,10 @@ body {
   --font-hover-color: rgba(68, 73, 62, 0.9);
   --shadow-color: 0.5px 0.5px 25px 1px rgba(59, 58, 52, 0.5);
   --shadow-hover-color: 0.5px 0.5px 50px 1px rgba(185, 181, 157, 0.815);
-  --bg-layer1: url("/image/background/Dark/Dark_L1.svg");
-  --bg-layer2: url("/image/background/Dark/Dark_L2.svg");
-  --bg-layer3: url("/image/background/Dark/Dark_L3.svg");
-  --bg-layer4: url("/image/background/Dark/Dark_L4.svg");
+  --main-bg: linear-gradient(to bottom, var(--layer-four-color),0%, var(--layer-three-color),10%, var(--layer-four-color),80%,var(--layer-one-color) 100%);
+  --layer-one-color: var(--dark-color-blue-one);
+  --layer-two-color: var(--dark-color-blue-two);
+  --layer-three-color: var(--dark-color-blue-three);
+  --layer-four-color: var(--dark-color-blue-four);
   }
 }

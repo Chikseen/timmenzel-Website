@@ -14,12 +14,12 @@ function parallax() {
   var scrolled = window.pageYOffset;
 
   if (window.pageYOffset >= 750) {
-    document.querySelector(".layer1").style.transform = 'translateY(-1000px)';
-    document.querySelector(".layer2").style.transform = 'translateY(-1100px)';
-    document.querySelector(".layer3").style.transform = 'translateY(-1000px)';
-    document.querySelector(".layer4").style.transform = 'translateY(-1200px)';
-    if (window.pageYOffset >= 800) {
-      document.querySelector(".layer5").style.transform = 'translateY(-1500px)';
+    document.querySelector(".layer1").style.transform = 'translateY(-1500px)';
+    document.querySelector(".layer2").style.transform = 'translateY(-1600px)';
+    document.querySelector(".layer3").style.transform = 'translateY(-1700px)';
+    document.querySelector(".layer4").style.transform = 'translateY(-1800px)';
+    if (window.pageYOffset >= 1000) {
+      document.querySelector(".layer5").style.transform = 'translateY(-1900px)';
     }
   }
   
@@ -30,8 +30,8 @@ function parallax() {
     var st3 = document.querySelector(".layer4");
     var st4 = document.querySelector(".layer5");
 
-    var layerbg = (scrolled * 0.3) + 'px'
-    var layer1 = (scrolled * 0.8) + 'px'
+    var layerbg = (scrolled * 0.8) + 'px'
+    var layer1 = (scrolled * 0.3) + 'px'
     var layer2 = (scrolled * 0.5) + 'px'
     var layer3 = (scrolled * -0.3) + 'px'
     var layer4 = (scrolled * -1.3) + 'px'

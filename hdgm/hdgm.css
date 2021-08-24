@@ -69,3 +69,8 @@ html, body {
         ;
     }
 }
+
+.svg {
+    background-color: aqua;
+    text-align: center;
+}
