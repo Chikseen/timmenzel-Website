@@ -5,7 +5,7 @@ body {
   --font-hover-color: rgba(214, 224, 197, 0.9);
   --shadow-color: 0.5px 0.5px 25px 1px rgba(212, 209, 190, 0.5);
   --shadow-hover-color: 0.5px 0.5px 50px 1px rgba(93, 91, 78, 0.739);
-  --main-bg: linear-gradient(to bottom, var(--layer-four-color), 60%, hsl(0, 0%, 75%) 100%);
+  --main-bg: linear-gradient(to bottom, var(--layer-four-color),0%, var(--layer-three-color),5%, var(--layer-four-color),80%,var(--layer-one-color) 100%);
   --layer-one-color: var(--light-color-blue-one);
   --layer-two-color: var(--light-color-blue-two);
   --layer-three-color: var(--light-color-blue-three);
@@ -18,7 +18,7 @@ body.dark-theme {
   --font-hover-color: rgba(68, 73, 62, 0.9);
   --shadow-color: 0.5px 0.5px 25px 1px rgba(59, 58, 52, 0.5);
   --shadow-hover-color: 0.5px 0.5px 50px 1px rgba(185, 181, 157, 0.815);
-  --main-bg: linear-gradient(to bottom, var(--layer-four-color), 60%, hsl(0, 0%, 25%) 100%);
+  --main-bg: linear-gradient(to bottom, var(--layer-four-color),0%, var(--layer-three-color),5%, var(--layer-four-color),80%,var(--layer-one-color) 100%);
   --layer-one-color: var(--dark-color-blue-one);
   --layer-two-color: var(--dark-color-blue-two);
   --layer-three-color: var(--dark-color-blue-three);
@@ -40,7 +40,7 @@ body {
   left: 0;
   align-items: center;
   width: 100%;
-  height: 750px;
+
 }
 
 .layer1, .layer2, .layer3, .layer4 , .layer5{
@@ -413,7 +413,7 @@ body {
   --font-hover-color: rgba(214, 224, 197, 0.9);
   --shadow-color: 0.5px 0.5px 25px 1px rgba(212, 209, 190, 0.5);
   --shadow-hover-color: 0.5px 0.5px 50px 1px rgba(93, 91, 78, 0.739);
-  --main-bg: linear-gradient(to bottom, var(--layer-four-color),0%, var(--layer-three-color),10%, var(--layer-four-color),80%,var(--layer-one-color) 100%);
+  --main-bg: linear-gradient(to bottom, var(--layer-four-color),0%, var(--layer-three-color),5%, var(--layer-four-color),80%,var(--layer-one-color) 100%);
   --layer-one-color: var(--light-color-blue-one);
   --layer-two-color: var(--light-color-blue-two);
   --layer-three-color: var(--light-color-blue-three);
@@ -426,7 +426,7 @@ body {
   --font-hover-color: rgba(68, 73, 62, 0.9);
   --shadow-color: 0.5px 0.5px 25px 1px rgba(59, 58, 52, 0.5);
   --shadow-hover-color: 0.5px 0.5px 50px 1px rgba(185, 181, 157, 0.815);
-  --main-bg: linear-gradient(to bottom, var(--layer-four-color),0%, var(--layer-three-color),10%, var(--layer-four-color),80%,var(--layer-one-color) 100%);
+  --main-bg: linear-gradient(to bottom, var(--layer-four-color),0%, var(--layer-three-color),5%, var(--layer-four-color),80%,var(--layer-one-color) 100%);
   --layer-one-color: var(--dark-color-blue-one);
   --layer-two-color: var(--dark-color-blue-two);
   --layer-three-color: var(--dark-color-blue-three);

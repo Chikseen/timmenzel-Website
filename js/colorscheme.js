@@ -1,38 +1,49 @@
 
-let count = 0;
+let count = getRandomInt(0,5);
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  changeBackground(parseInt(Math.floor(Math.random() * (max - min)) + min));
+}
 
 document.querySelector(".mainbackground").addEventListener("click", function () {
-
   if (count < 4) {
     count++;
   }
   else {
     count = 0;
   }
+  changeBackground(count);
+});
 
-  switch (count) {
+function changeBackground(cbto) {
+  switch (cbto) {
     case 0:
-      console.log("0 + blue");
-      document.body.classList.toggle("monoscheme");
+      deselectAll();
       break;
     case 1:
-      console.log("1 + red");
-      document.body.classList.toggle("redscheme");
+      deselectAll();
+      document.body.classList.toggle("redscheme", true);
       break;
     case 2:
-      console.log("2 + green");
-      document.body.classList.toggle("redscheme");
-      document.body.classList.toggle("greenscheme");
+      deselectAll();
+      document.body.classList.toggle("greenscheme", true);
       break;
     case 3:
-      console.log("3 + yellow");
-      document.body.classList.toggle("greenscheme");
-      document.body.classList.toggle("yellowscheme");
+      deselectAll();
+      document.body.classList.toggle("yellowscheme", true);
       break;
     case 4:
-      console.log("4 + mono");
-      document.body.classList.toggle("yellowscheme");
-      document.body.classList.toggle("monoscheme");
+      deselectAll();
+      document.body.classList.toggle("monoscheme", true);
       break;
   }
-});
+}
+
+function deselectAll() {
+  document.body.classList.toggle("redscheme", false);
+  document.body.classList.toggle("greenscheme", false);
+  document.body.classList.toggle("yellowscheme", false);
+  document.body.classList.toggle("monoscheme", false);
+}
