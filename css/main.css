@@ -31,15 +31,6 @@ body {
   text-shadow: 0.5px 0.5px 10px rgba(110, 110, 119, 0.74);
   background: var(--main-bg);
   font-size: 1rem;
-  text-decoration: none;
-}
-
-.mainbackground{
-  position: absolute;
-  top: 0;
-  left: 0;
-  align-items: center;
-  width: 100%;
 }
 
 .layer1, .layer2, .layer3, .layer4 , .layer5{
@@ -78,7 +69,7 @@ body {
   height: 200px;
   justify-content:center;
   align-items: center;
-  transition: all 0.2s linear;
+  transition: all 0.4s ease-in-out;
 }
 .layer3 h1 {
   font-size: 5rem;
@@ -90,7 +81,6 @@ body {
   padding: 3rem;
   transition: all 0.2s ease-out;
 }
-
 
 .layer4 {
   z-index: -2;
@@ -104,8 +94,6 @@ body {
 
 .layer5 {
   z-index: -1;
-  left: -100px;
-  width: calc(100% + 100px);
   top: 700px;
   height: 2000px;
   transition: all 0.2s ease-out;
@@ -121,6 +109,11 @@ body {
   right: 10px;
 }
 
+.nav-view a{
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
 #about, #projects, #skills, #edu-exp {
   padding-top: 15px;
   margin-bottom: 20px;
@@ -132,9 +125,8 @@ body {
   display: flex;
   top: -5px;
   height: 30px;
-  width: 450px;
-  left: 50%;
-  margin-left: -225px;
+  width: 500px;
+  left: calc(50% - 250px);
   align-items: center;
   justify-content: center;
   backdrop-filter: blur(20px);
@@ -202,10 +194,6 @@ body {
 
 .project-grid .infotext {
   height: 350px;
-}
-
-.projects{
-  padding: 1%;
 }
 
 .skills .infotext, .about .infotext {
@@ -289,9 +277,6 @@ body {
 .header:hover {
   top: -10px;
   height: 100px;
-  width: 450px;
-  left: 50%;
-  margin-left: -225px;
 }
 
 .infotextimg:hover, .infotext img:hover {
@@ -322,6 +307,10 @@ body {
   body {
     font-size: 1.5rem;
   } 
+  .layer5, .layer4, .layer2, .layer1 {
+  left: -75%;
+  width: 175%;
+ }
   .colormode{
     position: absolute;
     top: 10px;
@@ -349,25 +338,13 @@ body {
     transition: all 0.5s;
   }
   .box-menu {
-    height: 80px;
-    width: 80px;
+    height: 4rem;
+    width: 4rem;
     backdrop-filter: blur(10px);
     box-shadow: 0.5px 0.5px 5px 0.5px rgba(58, 56, 44, 0.5);
     border-radius: 10px;
     background-color: var(--bg-color);
     justify-content:center;
-    transition: all 0.5s;
-  }
-  .box-menu-content {
-    position: relative;
-    top: 10%;
-    left: 7%;
-    margin: 11px;
-    height: 5%;
-    width: 70%;
-    background-color: var(--font-color);
-    border-radius: 2px;
-    font-size: 0.5px;
     transition: all 0.5s;
   }
   .menu {
@@ -388,17 +365,9 @@ body {
     top: 10px;
     left: 10px;
   }
-  .port-header:hover .box-menu-content {
-    background-color: rgba(0, 0, 0, 0);
-    margin: 0px;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100px;
-  }
   .port-header:hover .box-menu{
-    height: 480px;
-    width: 230px;
+    height: 250px;
+    width: 250px;
   }
   .port-header:hover .menu a{
     color: var(--font-color);
