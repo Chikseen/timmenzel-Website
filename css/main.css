@@ -164,9 +164,11 @@ body {
   justify-content: center;
   margin: 10px;
 }
-#findme img {
-  width: 40px;
-  height: 30px;
+#github, #email {
+  width: 50px;
+}
+#li-in {
+  width: 60px;
 }
 
 .infoscreen {
