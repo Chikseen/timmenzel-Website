@@ -16,7 +16,7 @@ body.dark-theme {
   --font-color: rgba(205, 209, 190, 0.9);
   --bg-hover-color: rgba(189, 207, 207, 0.6);
   --font-hover-color: rgba(68, 73, 62, 0.9);
-  --shadow-color: 0.5px 0.5px 25px 1px rgba(59, 58, 52, 0.5);
+  --shadow-color: 0.5px 0.5px 25px 1px rgba(71, 70, 59, 0.685);
   --shadow-hover-color: 0.5px 0.5px 50px 1px rgba(185, 181, 157, 0.815);
   --main-bg: linear-gradient(to bottom, var(--layer-four-color),0%, var(--layer-three-color),5%, var(--layer-four-color),80%,var(--layer-one-color) 100%);
   --layer-one-color: var(--dark-color-blue-one);
@@ -34,6 +34,7 @@ body {
 }
 
 .layer1, .layer2, .layer3, .layer4 , .layer5{
+  user-select: none;
   position: absolute;
   left: 0px;
   width: 100%;
@@ -43,7 +44,7 @@ body {
   z-index: -5;
   top: -175px;
   height: 2000px;
-  
+  transition: all 0.2s linear;
 }
 .layer1 svg {
   transition: all 0.4s ease-in-out;
@@ -76,7 +77,6 @@ body {
   background-color: var(--bg-color);
   overflow:hidden;
   backdrop-filter: blur(10px);
-  box-shadow: 0.5px 0.5px 10px 1px rgba(58, 56, 44, 0.5);
   border-radius: 10px;
   padding: 3rem;
   transition: all 0.2s ease-out;
@@ -104,52 +104,54 @@ body {
 }
 
 .color-mode{
+  user-select: none;
   position: absolute;
   top: 10px;
   right: 10px;
 }
 
-.nav-view a{
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
 #about, #projects, #skills, #edu-exp {
-  padding-top: 15px;
+  padding-top: 25px;
   margin-bottom: 20px;
 }
 
+#position-indicator {
+  user-select: none;
+  z-index: 2;
+  background-color: var(--layer-two-color);
+  box-shadow: var(--shadow-color);
+  transition: all 0.5s ease-in-out;
+  border-radius:10px;
+  position: absolute;
+  top: -10px;
+  left: 0%;
+  height: 60px;
+  width: 20%;
+}
 .header{
+  user-select: none;
   background-color: var(--bg-color);
   position: fixed;
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 10px;
   top: -5px;
   height: 30px;
   width: 500px;
   left: calc(50% - 250px);
-  align-items: center;
-  justify-content: center;
   backdrop-filter: blur(20px);
-  box-shadow: 0.5px 0.5px 10px 1px rgba(58, 56, 44, 0.5);
-  border-radius: 5px;
-  transition: 0.2s linear;
-  z-index: 10;
+  box-shadow: var(--shadow-color);
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
 }
 .header a{
+  text-align: center;
+  width: 20%;
+  z-index: 3;
   color: var(--font-color);
   text-decoration: none;
-}
-
-.port-header {
-  display: none;
-  transition: all 0.5s;
-  z-index: 10;
-}
-
-.header a {
-  padding-left: 20px;
-  padding-right: 20px;
-  transition: all 0.5s;
 }
 
 .about {
@@ -239,6 +241,7 @@ body {
   position:sticky;
   margin: 2%;
   width: 50%;
+  max-width: 600px;
   border-radius: 10px;
   box-shadow: 0.5px 0.5px 5px 0.5px rgba(58, 56, 44, 0.5);
   transition: all 0.5;
@@ -279,6 +282,11 @@ body {
 .header:hover {
   top: -10px;
   height: 100px;
+}
+
+.header:hover #position-indicator {
+  height: 110px;
+  background-color: var(--layer-three-color);
 }
 
 .infotextimg:hover, .infotext img:hover {
@@ -330,59 +338,22 @@ body {
     grid-template-columns: 100%;
   }
   .header{
-    top: 0px;
-    left: 0px;
-    display: none;
+    padding-top: 0px;
+    top: calc(100% - 40px);
+    left: 20px;
+    width: calc(100% - 40px);
+    font-size: 1rem;
   }
-  .port-header {
-    display: flex;
-    position: fixed;
-    top: -10px;
-    left: -10px;
-    transition: all 0.5s;
+  .header a {
+    padding-left: 2%;
+    padding-right: 2%;
   }
-  .box-menu {
-    height: 4rem;
-    width: 4rem;
-    backdrop-filter: blur(10px);
-    box-shadow: 0.5px 0.5px 5px 0.5px rgba(58, 56, 44, 0.5);
-    border-radius: 10px;
-    background-color: var(--bg-color);
-    justify-content:center;
-    transition: all 0.5s;
+  .header:hover {
+    height: 100px;
+    top: calc(100% - 140px);
   }
-  .menu {
-    display:none;
-    z-index: 1;
-    transition: all 0.5s;
-  }
-  .menu a{
-    text-decoration: none;
-    transition: all 0.5s;
-  }
-
-  .port-header:hover .menu {
-    display: flex;
-    flex-direction: column;
-
-    position: absolute;
-    top: 10px;
-    left: 10px;
-  }
-  .port-header:hover .box-menu{
-    width: 200px;
-    height: 460px;
-  }
-  .port-header:hover .box-menu svg{
-    fill: rgba(240, 0, 0, 0);
-    
-  }
-  .port-header:hover .menu a{
-    color: var(--font-color);
-    font-size: 1.7rem;
-    padding-left: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+  .header:hover #position-indicator{
+    height: 120px;
   }
 }
 
@@ -393,7 +364,7 @@ body {
   --font-color: rgba(36, 37, 37, 0.8);
   --bg-hover-color: rgba(72, 78, 78, 0.6);
   --font-hover-color: rgba(214, 224, 197, 0.9);
-  --shadow-color: 0.5px 0.5px 25px 1px rgba(212, 209, 190, 0.5);
+  --shadow-color: 0.5px 0.5px 25px 1px rgba(71, 70, 59, 0.685);
   --shadow-hover-color: 0.5px 0.5px 50px 1px rgba(93, 91, 78, 0.739);
   --main-bg: linear-gradient(to bottom, var(--layer-four-color),0%, var(--layer-three-color),5%, var(--layer-four-color),80%,var(--layer-one-color) 100%);
   --layer-one-color: var(--light-color-blue-one);

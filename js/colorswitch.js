@@ -16,14 +16,14 @@ function switchbutton(){
   document.querySelector(".color-switch-circle").classList.add("myswitch");
   if (isLight) {
     document.querySelector(".color-switch-circle").classList.add("myswitch");
-    document.querySelector(".color-switch-circle").style.transform = 'translateX(0px)';
-    document.querySelector(".color-switch-circle").style.fill = 'rgb(136, 136, 136)';
+    document.querySelector(".color-switch-circle").style.transform = "translateX(0px)";
+    document.querySelector(".color-switch-circle").style.fill = "rgb(136, 136, 136)";
     isLight = false;
   }
   else {
     document.querySelector(".color-switch-circle").classList.add("myswitch");
-    document.querySelector(".color-switch-circle").style.transform = 'translateX(45px)';
-    document.querySelector(".color-switch-circle").style.fill = 'rgb(54, 54, 54)';
+    document.querySelector(".color-switch-circle").style.transform = "translateX(45px)";
+    document.querySelector(".color-switch-circle").style.fill = "rgb(54, 54, 54)";
     isLight = true;
   }
 }

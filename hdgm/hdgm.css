@@ -9,9 +9,9 @@ html, body {
     height: 100%;
     display: grid;
     grid-template-areas: 
-    'a a'
-    'a a'
-    'b c'
+    "a a"
+    "a a"
+    "b c"
     ;
 }
 
@@ -64,8 +64,8 @@ html, body {
     .maingrid {
         display: grid;
         grid-template-areas: 
-        'a a b'
-        'a a c'
+        "a a b"
+        "a a c"
         ;
     }
 }

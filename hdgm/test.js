@@ -1,7 +1,7 @@
 
-window.addEventListener('resize', function(event){
+window.addEventListener("resize", function(event){
 
-    let body = document.querySelector('body');
+    let body = document.querySelector("body");
     let width = body.clientWidth;
     let height = body.clientHeight;
 
