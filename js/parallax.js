@@ -1,16 +1,23 @@
 window.addEventListener('scroll', throttle(parallax, 14));
 
+let home = document.getElementById("home");
+let about = document.getElementById("about");
+let projects = document.getElementById("projects");
+let skills = document.getElementById("skills");
+let currentWindow = top.innerHeight;
+
 function throttle(fn, wait) {
   var time = Date.now();
-    return function () {
-      if ((time + wait - Date.now()) < 0) {
-        fn();
-        time = Date.now();
-      }
+  return function () {
+    if ((time + wait - Date.now()) < 0) {
+      fn();
+      time = Date.now();
     }
+  }
 };
 
 function parallax() {
+
   var scrolled = window.pageYOffset;
 
   if (window.pageYOffset >= 750) {
@@ -22,8 +29,8 @@ function parallax() {
       document.querySelector(".layer5").style.transform = 'translateY(-1900px)';
     }
   }
-  
-  else{
+
+  else {
     var mbg = document.querySelector(".layer1");
     var st1 = document.querySelector(".layer2");
     var st2 = document.querySelector(".layer3");
@@ -51,4 +58,29 @@ function parallax() {
     st4.classList.add("myclass");
     st4.style.transform = 'translateY(' + layer4 + ')';
   }
+
+
+  let homeY = home.scrollHeight  + 750;
+  let aboutY = about.scrollHeight + homeY;
+  let projectsY = projects.scrollHeight + aboutY;
+  let skillsY = skills.scrollHeight + projectsY;
+
+console.log(currentWindow);
+
+  if ((0 <= scrolled) && (scrolled < homeY)) {
+    console.log("Ich bin im home")
+  }
+  else if (scrolled < aboutY) {
+    console.log("Ich bin im about")
+  }
+  else if (scrolled < projectsY) {
+    console.log("Ich bin im projects")
+  }
+  else if (scrolled < skillsY) {
+    console.log("Ich bin im skills")
+  }
+  else {
+    console.log("Ich bin im skills")
+  }
+
 };
