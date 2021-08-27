@@ -146,7 +146,7 @@ body {
   z-index: 10;
 }
 
-.header p {
+.header a {
   padding-left: 20px;
   padding-right: 20px;
   transition: all 0.5s;
@@ -262,7 +262,7 @@ body {
   height:5px;
 }
 
-.header p:hover, .title h2:hover{
+.header a:hover, .title h2:hover{
   color: var(--font-hover-color);
   text-shadow: var(--shadow-hover-color);
 }
@@ -294,8 +294,10 @@ body {
   background-color: var(--bg-color);
   box-shadow: var(--shadow-color);
 }
+.color-switch-circle {
+  fill: rgb(68, 129, 68);
+}
 .color-switch-circle:hover {
-  fill: green;
   transform: translate(295px, 115px);
 }
 .switch {
@@ -352,26 +354,33 @@ body {
     z-index: 1;
     transition: all 0.5s;
   }
-  .menu a {
+  .menu a{
     text-decoration: none;
-    padding-bottom: 30px;
-    font-size: 1rem;
     transition: all 0.5s;
   }
 
   .port-header:hover .menu {
-    display:inline;
+    display: flex;
+    flex-direction: column;
+
     position: absolute;
     top: 10px;
     left: 10px;
   }
   .port-header:hover .box-menu{
-    height: 250px;
-    width: 250px;
+    width: 200px;
+    height: 460px;
+  }
+  .port-header:hover .box-menu svg{
+    fill: rgba(240, 0, 0, 0);
+    
   }
   .port-header:hover .menu a{
     color: var(--font-color);
-    font-size: 2rem;
+    font-size: 1.7rem;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 
