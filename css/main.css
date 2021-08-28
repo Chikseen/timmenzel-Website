@@ -182,7 +182,6 @@ body {
   backdrop-filter: blur(10px);
   box-shadow: 0.5px 0.5px 10px 1px rgba(58, 56, 44, 0.5);
   border-radius: 10px;
-  backdrop-filter: blur(10px);
   background-color: var(--bg-color);
   transition: all 0.5s;
 }
@@ -344,8 +343,8 @@ body {
     padding-right: 2%;
   }
   .header:hover {
-    height: 100px;
     top: calc(100% - 140px);
+    height: 130px;
   }
   .header:hover #position-indicator{
     height: 120px;
@@ -379,5 +378,26 @@ body {
   --layer-two-color: var(--dark-color-blue-two);
   --layer-three-color: var(--dark-color-blue-three);
   --layer-four-color: var(--dark-color-blue-four);
+  }
+}
+
+/*THX FIREFOX*/
+@-moz-document url-prefix() {
+  @media (prefers-color-scheme: light) { 
+    body.dark-theme{
+      --bg-color: rgba(63, 70, 70, 0.9);
+    }
+    body{
+      
+      --bg-color: rgba(235, 243, 243, 0.9);
+    }
+  }
+  @media (prefers-color-scheme: dark) { 
+    body{
+      --bg-color: rgba(235, 243, 243, 0.9);
+    }
+    body.light-theme{
+      --bg-color: rgba(63, 70, 70, 0.9);
+    }
   }
 }

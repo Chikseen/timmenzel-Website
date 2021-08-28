@@ -78,6 +78,8 @@ async function displayIndicator(scrolled) {
   let expY = exp.scrollHeight + skillsY;
   let multiindicator = [homeY, aboutY, projectsY, skillsY, expY];
 
+  /*TO-DO There has to be a better way to this*/
+
   if ((0 <= scrolled) && (scrolled < homeY)) {
     pi.style.left = "0px";
 
