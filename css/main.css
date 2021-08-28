@@ -262,11 +262,6 @@ body {
   background-color: var(--bg-color);
 }
 
-#top{
-  background-color: var(--bg-color);
-  height:5px;
-}
-
 .header a:hover, .title h2:hover{
   color: var(--font-hover-color);
   text-shadow: var(--shadow-hover-color);
