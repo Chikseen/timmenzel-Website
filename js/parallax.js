@@ -5,11 +5,15 @@ let about = document.getElementById("about");
 let projects = document.getElementById("projects");
 let skills = document.getElementById("skills");
 let exp = document.getElementById("edu-exp");
-let currentWindow;
 
 let pi = document.getElementById("position-indicator");
 
-stepCount = 0;
+let currentWindow;
+let homeY;
+let aboutY;
+let projectsY;
+let skillsY;
+let expY 
 
 function throttle(fn, wait) {
   var time = Date.now();
@@ -21,7 +25,7 @@ function throttle(fn, wait) {
   }
 };
 
-function parallax() {
+async function parallax() {
 
   var scrolled = window.pageYOffset;
 
@@ -63,7 +67,6 @@ function parallax() {
     st4.classList.add("myclass");
     st4.style.transform = "translateY(" + layer4 + ")";
   }
-
   displayIndicator(scrolled);
 };
 
@@ -71,12 +74,11 @@ function parallax() {
 async function displayIndicator(scrolled) {
 
   currentWindow = window.innerHeight;
-  let homeY = home.scrollHeight + 750;
-  let aboutY = about.scrollHeight + homeY;
-  let projectsY = projects.scrollHeight + aboutY;
-  let skillsY = skills.scrollHeight + projectsY;
-  let expY = exp.scrollHeight + skillsY;
-  let multiindicator = [homeY, aboutY, projectsY, skillsY, expY];
+  homeY = home.scrollHeight + 750;
+  aboutY = about.scrollHeight + homeY;
+  projectsY = projects.scrollHeight + aboutY;
+  skillsY = skills.scrollHeight + projectsY;
+  expY = exp.scrollHeight + skillsY;
 
   /*TO-DO There has to be a better way to this*/
 
