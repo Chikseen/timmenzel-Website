@@ -1,0 +1,42 @@
+@media screen and (orientation: portrait) {
+    body {
+      font-size: 1.5rem;
+    } 
+    .layer5, .layer4, .layer2, .layer1 {
+    left: -75%;
+    width: 175%;
+   }
+    .colormode{
+      position: absolute;
+      top: 10px;
+      right: 110px;
+      display: inline;
+    }
+    .colormode img {
+      position: absolute;
+      right: 0px;
+      width: 100px;
+    } 
+    .edu-exp-grid, .project-grid {
+      grid-template-columns: 100%;
+    }
+    .header{
+      padding-top: 0px;
+      top: calc(100% - 40px);
+      left: 20px;
+      width: calc(100% - 40px);
+      font-size: 1rem;
+    }
+    .header a {
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+    .header:hover {
+      top: calc(100% - 140px);
+      height: 130px;
+    }
+    .header:hover #position-indicator{
+      height: 120px;
+    }
+  }
+  
