@@ -1,7 +1,5 @@
 @media screen and (orientation: portrait) {
-    body {
-      font-size: 1.5rem;
-    } 
+   
     .layer5, .layer4, .layer2, .layer1 {
     left: -75%;
     width: 175%;
