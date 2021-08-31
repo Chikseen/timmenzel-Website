@@ -33,46 +33,17 @@
             <button class="buttons" id="gb2">gb3</button>
             <button class="buttons" id="gb3">gb4</button>
 
-            <button class="buttons" id="fi0">fi0</button>
-            <button class="buttons" id="fi1">fi1</button>
-            <button class="buttons" id="fi2">fi2</button>
-            <button class="buttons" id="fi3">fi3</button>
-            <button class="buttons" id="fi4">fi4</button>
-            <button class="buttons" id="fi5">fi5</button>
-            <button class="buttons" id="fi6">fi6</button>
-            <button class="buttons" id="fi7">fi7</button>
-            <button class="buttons" id="fi8">fi8</button>
-            <button class="buttons" id="fi9">fi9</button>
-            <button class="buttons" id="fi10">fi10</button>
-            <button class="buttons" id="fi11">fi11</button>
-            <button class="buttons" id="fi12">fi12</button>
-            <button class="buttons" id="fi13">fi13</button>
-            <button class="buttons" id="fi14">fi14</button>
-            <button class="buttons" id="fi15">fi15</button>
-            <button class="buttons" id="fi16">fi16</button>
-            <button class="buttons" id="fi17">fi17</button>
-            <button class="buttons" id="fi18">fi18</button>
-            <button class="buttons" id="fi19">fi19</button>
-            <button class="buttons" id="fi20">fi20</button>
-            <button class="buttons" id="fi21">fi21</button>
-            <button class="buttons" id="fi22">fi22</button>
-            <button class="buttons" id="fi23">fi23</button>
-            <button class="buttons" id="fi24">fi24</button>
-            <button class="buttons" id="fi25">fi25</button>
-            <button class="buttons" id="fi26">fi26</button>
-            <button class="buttons" id="fi27">fi27</button>
-            <button class="buttons" id="fi28">fi28</button>
-            <button class="buttons" id="fi29">fi29</button>
-            <button class="buttons" id="fi30">fi30</button>
-            <button class="buttons" id="fi31">fi31</button>
-            <button class="buttons" id="fi32">fi32</button>
-            <button class="buttons" id="fi33">fi33</button>
-            <button class="buttons" id="fi34">fi34</button>
-            <button class="buttons" id="fi35">fi35</button>
-            <button class="buttons" id="fi36">fi36</button>
-            <button class="buttons" id="fi37">fi37</button>
-            <button class="buttons" id="fi38">fi38</button>
-            <button class="buttons" id="fi39">fi39</button>
+            <script>
+
+                for (let i = 0; i < 40; i++) {
+                    const btn = document.createElement("button");
+                    btn.classList.add("buttons");
+                    btn.setAttribute("id", "fi" + i);
+                    btn.textContent = "fi" + i;
+                    document.querySelector(".gamewindow").append(btn);
+                }
+
+            </script>
 
             <button class="buttons" id="rh0">rh1</button>
             <button class="buttons" id="rh1">rh2</button>
@@ -112,14 +83,15 @@
         </div>
     </div>
 
-  
+
     <div class="svg">
         <h1>Hallo</h1>
         <p>hellllo</p>
-     <svg viewBox="0 0 600 600">
-         <path fill="#0099ff" fillopacity="1"
-         d="M0 100 Q50 50 100 150 Q 150 200 200 150 C 250 100 250 100 300 100 C 350 100 350 100 400 150 C 450 200 450 200 500 150 C 550 100 750 50 800 200 L 800 600 L 0 600 Z"></path>
-     </svg>
+        <svg viewBox="0 0 600 600">
+            <path fill="#0099ff" fillopacity="1"
+                d="M0 100 Q50 50 100 150 Q 150 200 200 150 C 250 100 250 100 300 100 C 350 100 350 100 400 150 C 450 200 450 200 500 150 C 550 100 750 50 800 200 L 800 600 L 0 600 Z">
+            </path>
+        </svg>
     </div>
 
     <Script src="/hdgm/test.js"></Script>

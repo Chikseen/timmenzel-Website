@@ -1,4 +1,4 @@
-window.addEventListener("scroll", throttle(parallax, 14));
+
 
 let home = document.getElementById("home");
 let about = document.getElementById("about");
@@ -24,6 +24,8 @@ function throttle(fn, wait) {
     }
   }
 };
+
+window.addEventListener("scroll", throttle(parallax,10));
 
 async function parallax() {
 
