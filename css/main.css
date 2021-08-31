@@ -36,7 +36,6 @@ body {
 .layer1, .layer2, .layer3, .layer4 , .layer5{
   user-select: none;
   position: absolute;
-  left: 0px;
   width: 100%;
 }
 
@@ -216,10 +215,6 @@ body {
   margin-right: 3rem;
   gap:20px
 }
-.eduexp-grid {
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
 
 .project-grid .infotext {
   height: auto;
@@ -237,7 +232,6 @@ body {
 
 .infotext img {
   z-index: 0;
-  position:sticky;
   margin: 2%;
   width: 50%;
   max-width: 600px;
@@ -248,7 +242,6 @@ body {
 
 .infotextimg{
   z-index: 1;
-  position: absolute;
   top:100px;
   left: 0px;
   right: 0px;       
