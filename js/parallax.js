@@ -1,4 +1,4 @@
-window.addEventListener("scroll", throttle(parallax, 0));
+
 
 let home = document.getElementById("home");
 let about = document.getElementById("about");
@@ -13,7 +13,9 @@ let homeY;
 let aboutY;
 let projectsY;
 let skillsY;
-let expY 
+let expY
+
+window.addEventListener("scroll", throttle(parallax, 5));
 
 function throttle(fn, wait) {
   var time = Date.now();
@@ -29,51 +31,49 @@ async function parallax() {
 
   var scrolled = window.pageYOffset;
 
+  let mbg = document.getElementById("l1");
+  let st1 = document.getElementById("l2");
+  let st2 = document.getElementById("home");
+  let st3 = document.getElementById("l4");
+  let st4 = document.getElementById("l5");
+
+
   if (window.pageYOffset >= 750) {
-    document.querySelector(".layer1").style.transform = "translateY(-1500px)";
-    document.querySelector(".layer2").style.transform = "translateY(-1600px)";
-    document.querySelector(".layer3").style.transform = "translateY(-1700px)";
-    document.querySelector(".layer4").style.transform = "translateY(-1800px)";
+    mbg.style.transform = "translateY(-1500px)";
+    st1.style.transform = "translateY(-1600px)";
+    st2.style.transform = "translateY(-1700px)";
+    st3.style.transform = "translateY(-1800px)";
     if (window.pageYOffset >= 1000) {
-      document.querySelector(".layer5").style.transform = "translateY(-1900px)";
+      st4.style.transform = "translateY(-1900px)";
     }
   }
 
   else {
-    var mbg = document.querySelector(".layer1");
-    var st1 = document.querySelector(".layer2");
-    var st2 = document.querySelector(".layer3");
-    var st3 = document.querySelector(".layer4");
-    var st4 = document.querySelector(".layer5");
-
-    var layerbg = (scrolled * 0.8) + "px"
-    var layer1 = (scrolled * 0.3) + "px"
-    var layer2 = (scrolled * 0.5) + "px"
-    var layer3 = (scrolled * -0.3) + "px"
-    var layer4 = (scrolled * -1.3) + "px"
 
     mbg.classList.add("myclass");
-    mbg.style.transform = "translateY(" + layerbg + ")";
+    mbg.style.transform = "translateY(" + (scrolled * 0.8) + "px)";
 
     st1.classList.add("myclass");
-    st1.style.transform = "translateY(" + layer1 + ")";
+    st1.style.transform = "translateY(" + (scrolled * 0.3) + "px)";
 
     st2.classList.add("myclass");
-    st2.style.transform = "translateY(" + layer2 + ")";
+    st2.style.transform = "translateY(" + (scrolled * 0.5) + "px)";
 
     st3.classList.add("myclass");
-    st3.style.transform = "translateY(" + layer3 + ")";
+    st3.style.transform = "translateY(" + (scrolled * -0.3) + "px)";
 
     st4.classList.add("myclass");
-    st4.style.transform = "translateY(" + layer4 + ")";
+    st4.style.transform = "translateY(" + (scrolled * -1.3) + "px)";
   }
-  displayIndicator(scrolled);
+  await displayIndicator(scrolled);
 };
 
 
 async function displayIndicator(scrolled) {
 
   currentWindow = window.innerHeight;
+  //Scrolled -> currentwindow defines the upper und lower position of the current screen
+
   homeY = home.scrollHeight + 750;
   aboutY = about.scrollHeight + homeY;
   projectsY = projects.scrollHeight + aboutY;
