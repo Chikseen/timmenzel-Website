@@ -22,7 +22,7 @@ function switchbutton(){
   }
   else {
     document.querySelector(".color-switch-circle").classList.add("myswitch");
-    document.querySelector(".color-switch-circle").style.transform = "translateX(45px)";
+    document.querySelector(".color-switch-circle").style.transform = "translateX(30px)";
     document.querySelector(".color-switch-circle").style.fill = "rgb(54, 54, 54)";
     isLight = true;
   }
