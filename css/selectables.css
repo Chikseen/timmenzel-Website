@@ -62,8 +62,8 @@
   
 
 .color-mode{
-    height: 50px;
-    width: 100px;
+    height: 40px;
+    width: 75px;
     border: rgba(0, 0, 0, 0);
     border-radius: 100px;
     background-color: var(--bg-color);
@@ -71,11 +71,13 @@
   }
   .color-switch-circle {
     fill: rgb(68, 129, 68);
+    transition: all 0.2s ease-in-out;
   }
   .color-switch-circle:hover {
     transform: translate(295px, 115px);
   }
   .switch {
     width: 100px;
-    height: 50px;
+    height: 40px;
+    
   }

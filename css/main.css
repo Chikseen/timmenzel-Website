@@ -72,7 +72,7 @@ body {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   margin-left: 3rem;
   margin-right: 3rem;
   gap:20px;
