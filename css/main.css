@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   --bg-color: rgba(235, 243, 243, 0.6);
   --font-color: rgba(36, 37, 37, 0.8);
