@@ -1,34 +1,57 @@
 <template>
 	<div class="wave_wrapper">
 		<svg class="wave_svg" height="100%" width="100%" viewBox="0 0 100 100" preserveAspectRatio="none"
-			xmlns="http://www.w3.org/2000/svg" :style="'fill: ' + getRandomColor()">
+			xmlns="http://www.w3.org/2000/svg" :style="`fill: ${color}`">
 			<path :d="pathString" />
 		</svg>
-		<p>{{ pathString }}</p>
 	</div>
 </template>
 
 <script lang="ts">
+
 export default {
 	props: {
-		path: Array
+		path: Array<number>,
+		waveConfig: Object,
+		index: Number,
 	},
 	data() {
 		return {
-			pathString: "M 0 100"
+			pathString: "M 0 100",
+			color: ""
 		}
 	},
-	methods: {
-		getRandomColor() {
-			return "#" + Math.floor(Math.random() * 16777215).toString(16);
-		}
-	},
+	methods: {},
 	created() {
-		for (let i = 0; i < (this.path.length); i++) {
-			const value = this.path[i];
-			this.pathString += ` L ${((i) * 10)} ${value}`
+		this.color = new Color().brightness(this.waveConfig?.baseColor, (this.index! + 1) * 30);
+
+		// set path
+		if (this.path != undefined) {
+			for (let i = 0; i < (this.path.length); i++) {
+
+				switch (i) {
+					case 0: {
+						const value: number = this.path[i];
+						this.pathString += ` L 0 ${value}`
+						break;
+					}
+
+					case 1: {
+						const value: number = this.path[i];
+						const offSet: number = 5 - (Math.random() * 10)
+						this.pathString += ` Q 5 ${value + offSet} ${((i) * 10)} ${value}`
+						break;
+					}
+
+					default: {
+						const value = this.path[i];
+						this.pathString += ` T ${((i) * 10)} ${value}`
+						break;
+					}
+				}
+			}
+			this.pathString += ` L 100 100`
 		}
-		this.pathString += ` L 100 100`
 	},
 }
 </script>
@@ -41,15 +64,11 @@ export default {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		transition: all 1s;
-
-		:nth-child(2) {
-			filter: brightness(2);
-		}
+		overflow: hidden;
 	}
 
 	&_svg {
-		transition: all 1s;
+		min-width: 750px
 	}
 }
 </style>
