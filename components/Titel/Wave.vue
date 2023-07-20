@@ -11,46 +11,43 @@
 
 export default {
 	props: {
-		path: Array<number>,
+		path: Array,
+		color: String,
 		waveConfig: Object,
 		index: Number,
 	},
-	data() {
-		return {
-			pathString: "M 0 100",
-			color: ""
-		}
-	},
 	methods: {},
-	created() {
-		this.color = new Color().brightness(this.waveConfig?.baseColor, (this.index! + 1) * 30);
+	computed: {
+		pathString() {
+			let string: string = "M 0 100"
 
-		// set path
-		if (this.path != undefined) {
-			for (let i = 0; i < (this.path.length); i++) {
+			// set path
+			if (this.path != undefined) {
+				for (let i = 0; i < (this.path.length); i++) {
+					switch (i) {
+						case 0: {
+							const value: number = this.path[i];
+							string += ` L 0 ${value}`
+							break;
+						}
 
-				switch (i) {
-					case 0: {
-						const value: number = this.path[i];
-						this.pathString += ` L 0 ${value}`
-						break;
-					}
+						case 1: {
+							const value: number = this.path[i];
+							const offSet: number = 5 - (Math.random() * 10)
+							string += ` Q 5 ${value + offSet} ${((i) * 10)} ${value}`
+							break;
+						}
 
-					case 1: {
-						const value: number = this.path[i];
-						const offSet: number = 5 - (Math.random() * 10)
-						this.pathString += ` Q 5 ${value + offSet} ${((i) * 10)} ${value}`
-						break;
-					}
-
-					default: {
-						const value = this.path[i];
-						this.pathString += ` T ${((i) * 10)} ${value}`
-						break;
+						default: {
+							const value: number = this.path[i];
+							string += ` T ${((i) * 10)} ${value}`
+							break;
+						}
 					}
 				}
+				string += ` L 100 100`
 			}
-			this.pathString += ` L 100 100`
+			return string
 		}
 	},
 }
@@ -68,7 +65,12 @@ export default {
 	}
 
 	&_svg {
-		min-width: 750px
+		min-width: 750px;
+		transition: all 0.25s ease-out;
+
+		path {
+			transition: all 0.5s ease-out;
+		}
 	}
 }
 </style>

@@ -14,4 +14,18 @@ export default defineNuxtConfig({
 		public: {},
 	},
 	components: [{ path: "~/components", pathPrefix: false }],
+	app: {
+		head: {
+			link: [
+				{
+					rel: "preconnect",
+					href: "https://fonts.googleapis.com",
+				},
+				{
+					rel: "stylesheet",
+					href: "https://fonts.googleapis.com/css2?family=Raleway&display=swap",
+				},
+			],
+		},
+	},
 });

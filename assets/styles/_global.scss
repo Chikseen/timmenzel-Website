@@ -1,0 +1,18 @@
+$gold: #D4AF37;
+$gold-shadow: #d4af3788;
+
+$dark-background: #22222255;
+$dark-text: #222222;
+$light-background: #eeeeee55;
+$light-text: #eeeeee;
+
+.light-text-box {
+	background-color: $light-background;
+	color: $dark-text;
+	transition: all 0.5s ease-out;
+}
+.dark-text-box {
+	background-color: $dark-background;
+	color: $light-text;
+	transition: all 0.5s ease-out;
+}
