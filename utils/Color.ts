@@ -52,7 +52,7 @@ export default class Color {
 		return `#${(g | (b << 8) | (r << 16)).toString(16)}`;
 	}
 
-	private getRandomColor(): string {
+	public getRandomColor(): string {
 		const color: string = Math.floor(Math.random() * 16777215).toString(16);
 		if (color.length === 6) return color;
 		else return this.getRandomColor();

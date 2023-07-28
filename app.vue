@@ -1,7 +1,7 @@
 <template>
   <titel :waveConfig="waveConfig" :waves="waves" :waveColors="waveColors" @changeTheme="changeTheme"
-    @changeBackground="changeBackground" />
-  <content :color="waveColors[waveColors.length - 1]" />
+    @changeBackground="changeBackground" :style="`background-color: ${waveConfig?.baseColor};`" />
+  <content :style="`background-color: ${waveColors[waveColors.length - 1]};`" />
 </template>
 
 <script lang="ts">
@@ -13,7 +13,7 @@ export default {
       waveConfig: {
         amplitute: 5,
         numberOfWaves: 4,
-        baseColor: "",
+        baseColor: "000000",
       }
     }
   },
@@ -60,6 +60,10 @@ export default {
     this.setBaseColor()
     this.calcWaves()
   },
+  mounted() {
+    this.setBaseColor()
+    this.calcWaves()
+  }
 }
 </script>
 
@@ -68,12 +72,43 @@ html,
 body {
   margin: 0;
   padding: 0;
+  font-size: 14px;
   font-family: "Raleway";
+  font-display: swap;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.icon {
+  &_base {
+    width: fit-content;
+    height: 50px;
+    width: 75px;
+
+    &_color {
+      background-color: #7e7e7e;
+    }
+  }
+}
+
+.background-color-transition {
+  transition: background-color 0.5s ease-out
 }
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+img {
+  object-fit: contain !important;
+  border-radius: 10px !important;
 }
 </style>

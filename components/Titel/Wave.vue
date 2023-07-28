@@ -11,7 +11,7 @@
 
 export default {
 	props: {
-		path: Array,
+		path: Array<number>,
 		color: String,
 		waveConfig: Object,
 		index: Number,
@@ -66,10 +66,10 @@ export default {
 
 	&_svg {
 		min-width: 750px;
-		transition: all 0.25s ease-out;
+		transition: fill 0.5s ease-out;
 
 		path {
-			transition: all 0.5s ease-out;
+			transition: d 0.5s ease-out;
 		}
 	}
 }
